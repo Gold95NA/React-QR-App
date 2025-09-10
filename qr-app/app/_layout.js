@@ -1,3 +1,5 @@
+//Anthony Nalle
+
 import { Slot } from 'expo-router';
 import { FavoritesProvider } from '../src/context/FavoritesContext';
 
