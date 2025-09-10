@@ -1,15 +1,10 @@
-import { Drawer } from 'expo-router/drawer';
+import { Slot } from 'expo-router';
+import { FavoritesProvider } from '../src/context/FavoritesContext';
 
 export default function RootLayout() {
   return (
-    <Drawer screenOptions={{ drawerPosition: 'right' }}>
-      {}
-      <Drawer.Screen name="index" options={{ title: 'Home' }} />
-      {}
-      <Drawer.Screen
-        name="(products)"
-        options={{ title: 'Products (QR Scanner)' }}
-      />
-    </Drawer>
+    <FavoritesProvider>
+      <Slot />
+    </FavoritesProvider>
   );
 }
